@@ -1,0 +1,23 @@
+body,
+html {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: fantasy;
+  background-color: whitesmoke;
+  height: auto;
+}
+
+
+
+
+
