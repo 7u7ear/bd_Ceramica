@@ -58,11 +58,12 @@
 
     ?>
     <div class="container p-2 mt-5">
-    <div class="row"></div>
-    <div class="col-2 p-3"></div>    
-    <div class="row m-2">            
-            <div class="col-3  p-3"></div>
-            <div class="col-6 bg-primary p-3">
+        <div class="row "></div>
+        <div class="col-2 p-3 "></div>
+        <div class="row m-2">
+            <div class="col-3 p-3"></div>
+            
+            <div class="col   bg-primary p-3">
                 <h2 style="font-family: 'Courier New', Courier, monospace; color: white;">Formulario de Agentes:</h2>
                 <section class="contact-form">
 
@@ -71,12 +72,12 @@
                         <label for="id_rh">Id RH:</label>
                         <input type="text" id="id_rh" name="id_rh" required /><br><br>
 
-                        <label for="apellido_Nombre">Apellido/s y Nombre/s:</label> 
+                        <label for="apellido_Nombre">Apellido/s y Nombre/s:</label>
                         <input type="text" id="apellido_Nombre" name="apellido_Nombre" required /> <br><br>
 
                         <label for="cuil">CUIL:</label>
                         <input type="text" id="cuil" name="cuil" required />&nbsp;&nbsp;
-
+                        
                         <label for="dni">DNI:</label>
                         <input type="number" id="dni" name="dni" required /> <br><br>
 
@@ -90,9 +91,11 @@
                         <input type="date" id="IngresoEst" name="IngresoEst" required />&nbsp;&nbsp;
 
                         <label for="ultima_DJ">Última DJ:</label>
-                        <input type="date" id="ultima_DJ" name="ultima_DJ" required /><br><br>                        
+                        <input type="date" id="ultima_DJ" name="ultima_DJ"  /><br><br>
 
-                        <button type="submit" class="btn btn-primary ms-6 mb-3 me-3" name="enviar" style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">
+                        <button type="submit" class="btn btn-primary ms-6 mb-3 me-3" name="enviar" style="font-family: 'Courier New', Courier, monospace; font-weight: normal;" data-bs-toggle="tooltip" data-bs-placement="top"
+                            data-bs-custom-class="custom-tooltip"
+                            data-bs-title="Agregar a la base de datos">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                                 <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                 <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
@@ -111,8 +114,9 @@
                 </section>
 
             </div>
-            <div class="col-3  p-3"> </div>
+            <div class="col-3 p-3"></div>
         </div>
+    </div>
 </body>
 
 </HTml>
