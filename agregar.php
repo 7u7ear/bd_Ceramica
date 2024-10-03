@@ -59,21 +59,23 @@
     ?>
 
     <div class="container">
-        <div class="row mt-2"><div class="col "></div><h2 style="font-family: 'Courier New', Courier, monospace; color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-                 <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                 <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
-             </svg> Nuevo Agente:</h2></div>
+        <div class="row mt-2">
+            <div class="col "></div>
+            <h2 style="font-family: 'Courier New', Courier, monospace; color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
+                </svg> Nuevo Agente:</h2>
+        </div>
 
         <div class="row">
             <div class="col-sm-0 col-md-1 col-lg-1 col-xl-1 "></div>
 
             <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 mt-1 ">
-                
-                <div>
-                    <section class="contact-form bg-primary  p-4 rounded-3" >
 
+                <div>
+                    <section class="contact-form bg-primary  p-4 rounded-3">
                         <form id="miFormulario" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                          
+
 
                             <label for="id_rh">Id RH:</label>
                             <input type="text" id="id_rh" name="id_rh" required />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -81,7 +83,7 @@
                             <input type="checkbox" id="en_actividad" name="en_actividad" value="1" /> <br><br>
 
                             <label for="apellido_Nombre">Apellido/s y Nombre/s:</label>
-                            <input type="text" id="apellido_Nombre" name="apellido_Nombre" required /> 
+                            <input type="text" id="apellido_Nombre" name="apellido_Nombre" required />
 
                             <label for="cuil">Cuil:</label>
                             <input type="text" id="cuil" name="cuil" required /> <br><br>
@@ -92,37 +94,34 @@
                             <label for="ficha">Ficha:</label>
                             <input type="number" id="ficha" name="ficha" required /> <br><br>
 
-                            
+
                             <label for="IngresoEst">Fecha de Ingreso:</label>
                             <input type="date" id="IngresoEst" name="IngresoEst" required />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                             <label for="ultima_DJ">Última DDJJ:</label>
-                            <input type="date" id="ultima_DJ" name="ultima_DJ" /><br>
-                                                      
+                            <input type="date" id="ultima_DJ" name="ultima_DJ" />
+
 
                         </form>
                     </section>
                     <div class="mt-4 d-flex justify-content-end">
 
+                        <button type="submit" form="miFormulario" class="btn btn-primary ms-6 mb-3 me-3" name="enviar" style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
+                            </svg> Agregar
+                        </button>
 
-                            <button type="submit" form="miFormulario" class="btn btn-primary ms-6 mb-3 me-3" name="enviar" style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-                                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                                    <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
-                                </svg> Agregar
-                            </button>
-
-                            <a href="index.php" class="btn btn-primary ms-3 mb-3 " style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
-                                    <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1" />
-                                </svg> Regresar
-                            </a>
-                            </div>
+                        <a href="index.php" class="btn btn-primary ms-3 mb-3 " style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                                <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1" />
+                            </svg> Regresar
+                        </a>
+                    </div>
                 </div>
-
             </div>
             <div class="col-sm-0 col-md-1 col-lg-1 col-xl-1"></div>
-
         </div>
     </div>
 </body>

@@ -35,10 +35,10 @@
              <div class="row m-2">
                  <div class="col-12  mt-5)">
                      <h2 class="bg-primary p-2" style="font-family: 'Courier New', Courier, monospace; color: white;">Listado Agentes</h2>
-                     <div class="mb-3">
+                    
+                    <div class="mb-3">
                         <input type="text" class="form-control" id="searchInput" placeholder="Buscar en la tabla...">
-                    </div>
-
+                    </div> 
                      <table class="table table-striped table-bordered table-hover table-responsive"  style="max-height: 300px; overflow-y: auto;" >
                          <thead class="thead-dark text-center">
                              <tr>
