@@ -1,0 +1,5 @@
+ cd C:/wamp64/www/bd_Ceramica-main
+git status
+git add .
+git commit -m "Descripción de los cambios"
+git push origin main
