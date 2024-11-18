@@ -1,20 +1,41 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+  header("Location: index.php");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <nav class="navbar m-1 p-1" style="background-color: rgba(64, 142, 165, 0.5);">
-    <img src="img/LOGO-ESEACERAMICA1-ALTA-40x73.jpg" alt="logo" class="logoCera ms-2 " />
-    <h1 class=" font-family: Courier New, Courier, monospace; font-size: 40px; color: rgb(5, 13, 27); ">Esea en Cerámica Nº1</h1>
-    <img src="img/LOGO-ESEACERAMICA1-ALTA-40x73.jpg" alt="logo" class="logoCera me-2 " />
+  <!-- Navbar content -->
+  <img
+    src="img/LOGO-ESEACERAMICA1-ALTA-40x73.jpg"
+    alt="logo"
+    class="logoCera ms-2 " />
+  <h1 class=" font-family: Courier New, Courier, monospace; font-size: 40px; color: rgb(5, 13, 27); ">Esea en Cerámica Nº1</h1>
+
+  <img src="img/LOGO-ESEACERAMICA1-ALTA-40x73.jpg" alt="logo" class="logoCera me-2 " />
 </nav>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-10">
+      <h2>Bienvenid@, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
+    </div>
+
+    <div class="col-2"><a href="logout.php" class="btn btn-primary">Cerrar sesión</a>
+    </div>
+  </div>
+</div>
 
 <body>
     <?php
@@ -43,11 +64,11 @@
 
         if (mysqli_query($conn, $sql_update)) {
             echo "<script languaje='javascript'>alert('Datos Actualizados correctamente');
-            location.assign('index.php');
+            location.assign('agentes.php');
             </script>";
         } else {
             echo "<script languaje='javascript'>alert('Los datos NO se han Actualizado correctamente');
-            location.assign('index.php');
+            location.assign('agentes.php');
             </script>";
         }
 
@@ -118,7 +139,7 @@
                                 </svg> Actualizar
                             </button>
 
-                            <a href="index.php" class="btn btn-primary ms-6 mb-3" style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">
+                            <a href="agentes.php" class="btn btn-primary ms-6 mb-3" style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square" viewBox="0 0 16 16">
                                     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM4.646 4.646a.5.5 0 0 0-.708.708L7.293 8 3.938 11.354a.5.5 0 1 0 .708.708L8 8.707l3.354 3.355a.5.5 0 0 0 .708-.708L8.707 8l3.355-3.354a.5.5 0 0 0-.708-.708L8 7.293 4.646 4.646z" />
                                 </svg> Cancelar

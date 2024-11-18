@@ -1,26 +1,39 @@
 <?php
-include("coneccion.php");
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-$username = $_POST['username'];
-$password = $_POST['password'];
+include 'coneccion.php'; // Asegúrate de que este archivo exista y tenga la conexión a la base de datos
 
-// Preparar la consulta
-$stmt = $conn->prepare("SELECT * FROM usuarios WHERE username = ? AND password = ?");
-$stmt->bind_param("ss", $username, $password);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+        $username = $conn->real_escape_string($_POST['username']);
+        $password = $_POST['password'];
 
-// Ejecutar la consulta
-$stmt->execute();
-$result = $stmt->get_result();
+        $sql = "SELECT * FROM usuarios WHERE username = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-if ($result->num_rows > 0) {
-    session_start();
-    $_SESSION['username'] = $username;
-    header("Location: welcome.php");
-} else {
-    echo "Invalid username or password.";
+        if ($result->num_rows > 0) {
+            $user = $result->fetch_assoc();
+            if (password_verify($password, $user['password'])) {
+                $_SESSION['username'] = $user['username'];
+                header("Location: index.php");
+                exit();
+            } else {
+                echo "<script>alert('Contraseña incorrecta'); location.assign('index.php');</script>";
+            }
+        } else {
+            echo "<script>alert('Usuario no encontrado'); location.assign('index.php');</script>";
+        }
+
+        $stmt->close();
+    } else {
+        echo "<script>alert('Por favor complete todos los campos'); location.assign('index.php');</script>";
+    }
 }
 
-// Cerrar la conexión
-$stmt->close();
 $conn->close();
 ?>
