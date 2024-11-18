@@ -29,10 +29,10 @@ if (!isset($_SESSION['username'])) {
 <div class="container mt-5">
   <div class="row">
     <div class="col-10">
-      <h2>Bienvenid@, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
+      <h3 class="btn btn-primary" style="font-family: 'Courier New', Courier, monospace; color: white;">Bienvenid@, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h3>
     </div>
 
-    <div class="col-2"><a href="logout.php" class="btn btn-primary">Cerrar sesión</a>
+    <div class="col-2"><a href="logout.php" class="btn btn-primary"style="font-family: 'Courier New', Courier, monospace; color: white;">Cerrar sesión</a>
     </div>
   </div>
 </div>
@@ -46,7 +46,7 @@ if (!isset($_SESSION['username'])) {
         ?>
 
      <div class="container">
-         <a href="agregar.php" class="btn btn-primary ms-8 ">
+         <a href="agregar.php" class="btn btn-primary ms-8 "style="font-family: 'Courier New', Courier, monospace; color: white;">
              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
@@ -62,7 +62,7 @@ if (!isset($_SESSION['username'])) {
                         <input type="text" class="form-control" id="searchInput" placeholder="Buscar en la tabla...">
                     </div> 
                      <table class="table table-striped table-bordered table-hover table-responsive"  style="max-height: 300px; overflow-y: auto;" >
-                         <thead class="thead-dark text-center">
+                         <thead class="thead-dark text-center"style="font-family: 'Courier New', Courier, monospace; color: white; bg-info">
                              <tr>
                                  <th scope="col">Id_RH</th>
                                  <th scope="col">Apellido/s y Nombre/s</th>
@@ -75,7 +75,7 @@ if (!isset($_SESSION['username'])) {
                                  <th scope="col">Acciones</th>
                              </tr>
                          </thead>
-                         <tbody class="text-center">
+                         <tbody class="text-center"style="font-family: 'Courier New', Courier, monospace; ">
                              <?php
                                 while ($row = mysqli_fetch_assoc($result)) {
                                 ?>
@@ -93,7 +93,7 @@ if (!isset($_SESSION['username'])) {
                                             }
                                             ?>
                                      </td>
-                                     <td><?php echo $row['en_actividad'] ? 'Si' : 'Baja'; ?></td>
+                                     <td><?php echo $row['en_actividad'] ? 'Activo' : 'Baja'; ?></td>
                                      <td><?php echo '<a href="Editar.php?id_rh=' . $row['id_rh'] . '" class="btn btn-primary ms-8" title="Editar">
                                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
                                               <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>

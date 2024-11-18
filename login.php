@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $user = $result->fetch_assoc();
             if (password_verify($password, $user['password'])) {
                 $_SESSION['username'] = $user['username'];
-                header("Location: index.php");
+                header("Location: inicio.php");
                 exit();
             } else {
                 echo "<script>alert('Contraseña incorrecta'); location.assign('index.php');</script>";

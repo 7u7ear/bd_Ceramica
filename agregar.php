@@ -29,8 +29,7 @@ if (!isset($_SESSION['username'])) {
 <div class="container mt-5">
   <div class="row">
     <div class="col-10">
-      <h2>Bienvenid@, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h2>
-    </div>
+    <h3 class="btn btn-primary" style="font-family: 'Courier New', Courier, monospace; color: white;">Bienvenid@, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h3>    </div>
 
     <div class="col-2"><a href="logout.php" class="btn btn-primary">Cerrar sesión</a>
     </div>
