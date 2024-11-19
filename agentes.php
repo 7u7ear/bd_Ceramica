@@ -46,20 +46,25 @@ if (!isset($_SESSION['username'])) {
         ?>
 
      <div class="container">
-         <a href="agregar.php" class="btn btn-primary ms-8 "style="font-family: 'Courier New', Courier, monospace; color: white;">
+         <a href="agregar.php" class="btn btn-primary ms-3 mb-3 "style="font-family: 'Courier New', Courier, monospace; color: white;">
              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5" />
              </svg>&nbsp;&nbsp;Nuevo Agente
          </a>
+         <a href="inicio.php" class="btn btn-primary ms-3 mb-3 " style="font-family: 'Courier New', Courier, monospace; font-weight: normal;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16">
+                                <path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1" />
+                            </svg> Inicio
+                        </a>
          <!-- Formulario de contacto -->
          <div class="container p-2">
              <div class="row m-2">
                  <div class="col-12  mt-5)">
-                     <h2 class="bg-primary p-2" style="font-family: 'Courier New', Courier, monospace; color: white;">Listado Agentes</h2>
+                     <h3 class="bg-primary p-2" style="font-family: 'Courier New', Courier, monospace; color: white;">Listado Agentes</h3>
                     
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="searchInput" placeholder="Buscar en la tabla...">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Buscar Agente...">
                     </div> 
                      <table class="table table-striped table-bordered table-hover table-responsive"  style="max-height: 300px; overflow-y: auto;" >
                          <thead class="thead-dark text-center"style="font-family: 'Courier New', Courier, monospace; color: white; bg-info">
