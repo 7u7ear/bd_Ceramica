@@ -49,7 +49,11 @@
                             <label for="confirm_password">Confirmar Contraseña:</label>
                             <input type="password" id="confirm_password" name="confirm_password" required><br><br>
 
-                            <input type="submit" value="Registrar">
+                            <input type="submit" class="btn btn-light ms-3 mb-3 " value="Registrar">
+
+                            <a href="inicio.php" class="btn btn-light ms-3 mb-3 " style="font-family: 'Courier New', Courier, monospace; font-weight: normal;"> Inicio
+                            </a>
+
                         </form>
                         <?php
                         error_reporting(E_ALL);

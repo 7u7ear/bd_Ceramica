@@ -67,3 +67,31 @@ form {
   max-height: 300px;
   overflow-y: auto;
 }
+
+@media print {
+  /* Ocultar todos los elementos que no deseas en la impresión */
+  .nav, .footer, #searchInput, .btn { 
+      display: none !important;
+  }
+
+  /* Asegurar que solo se muestre lo que necesitas */
+  .table, h3.bg-primary {
+      display: block !important;
+  }
+
+  /* Opcional: Ajustar márgenes y tamaños para impresión */
+  body {
+      margin: 0;
+      padding: 10px;
+  }
+
+  /* Estilo específico para tablas en impresión */
+  .table {
+      width: 100%;
+      border: 1px solid black;
+  }
+
+  .table th, .table td {
+      border: 1px solid black;
+  }
+}

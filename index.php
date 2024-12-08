@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>BD_Cera</title>
 </head>
+
 <body>
     <nav class="navbar m-1 p-1" style="background-color: rgba(64, 142, 165, 0.5);">
         <img src="img/LOGO-ESEACERAMICA1-ALTA-40x73.jpg" alt="logo" class="logoCera ms-2" />
@@ -31,13 +33,26 @@
                                 <label for="password" class="form-label">Contraseña</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
                             </div>
-                            <button type="submit" class="btn btn-primary">Ingresar</button>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button type="submit" class="btn btn-primary">Ingresar</button>
+                                    </div>
+                                    <div class="col-6">
+                                        <a  href="register.php" class="btn btn-primary me">Registrarse</a>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
-                        <a href="register.php">Registrarse</a>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
+<footer>
+        <footer>© 2024 ESEA en Cerámica N°1. Escuela Superior de Enseñanza Artística de Cerámica. Bulnes 45, CABA.</footer>
+    </footer>

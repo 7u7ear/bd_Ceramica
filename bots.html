@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: index.php");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +25,16 @@
 
     <img  src="img/LOGO-ESEACERAMICA1-ALTA-40x73.jpg"  alt="logo"  class="logoCera me-2 " />
 </nav>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-10">
+            <h3 class="btn btn-primary" style="font-family: 'Courier New', Courier, monospace; color: white;">Bienvenid@, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h3>
+        </div>
+
+        <div class="col-2"><a href="logout.php" class="btn btn-primary" style="font-family: 'Courier New', Courier, monospace; color: white;">Cerrar sesión</a>
+        </div>
+    </div>
+</div>
 <body>
     
 </body>
@@ -23,3 +42,24 @@
     <footer>© 2024 ESEA en Cerámica N°1. Escuela Superior de Enseñanza Artística de Cerámica. Bulnes 45, CABA.</footer>
 </footer>
 </html>
+
+
+
+
+/*<?php
+$servername = "sql100.infinityfree.com";
+$username = "if0_37864542";
+$password = "SecreDireAlum";
+$dbname = "if0_37864542_ecn1_de2";
+
+
+// Create a connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Coneccion fallida: " . $conn->connect_error);
+}
+echo "" . "<br>";
+?>*/
+
