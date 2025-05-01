@@ -54,5 +54,5 @@
 
 </html>
 <footer>
-        <footer>© 2024 ESEA en Cerámica N°1. Escuela Superior de Enseñanza Artística de Cerámica. Bulnes 45, CABA.</footer>
+        <footer>© 2024 Escuela Superior de Enseñanza Artística de Cerámica Nº1. Bulnes 45, CABA.</footer>
     </footer>

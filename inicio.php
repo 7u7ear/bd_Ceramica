@@ -21,7 +21,7 @@ if (!isset($_SESSION['username'])) {
     src="img/LOGO-ESEACERAMICA1-ALTA-40x73.jpg"
     alt="logo"
     class="logoCera ms-2 " />
-  <h1 class=" font-family: Courier New, Courier, monospace; font-size: 40px; color: rgb(5, 13, 27); ">Esea en Cerámica Nº1</h1>
+    <h1 class="h4 d-none d-lg-block">Esea en Cerámica Nº1</h1>
 
   <img src="img/LOGO-ESEACERAMICA1-ALTA-40x73.jpg" alt="logo" class="logoCera me-2 " />
 </nav>
@@ -106,7 +106,7 @@ if (!isset($_SESSION['username'])) {
 
 </body>
 <footer>
-  <footer>© 2024 ESEA en Cerámica N°1. Escuela Superior de Enseñanza Artística de Cerámica. Bulnes 45, CABA.</footer>
+  <footer>© 2024 Escuela Superior de Enseñanza Artística de Cerámica N°1. Bulnes 45, CABA.</footer>
 </footer>
 
 </html>
